@@ -1,25 +1,20 @@
 def solution(N, stages):
     answer = []
-    fail = {}
-    stages.sort()
     player = len(stages)
-    stage_num = list(set(stages))
     
-    for i in range(N):
-        fail[i+1] = 0
-
-    for i in range(len(stage_num)):
-        if stage_num[i] > N:
-            break
+    for i in range(1, N+1):
         num = stages.count(stages[i])
-        fail[stage_num[i]] = num/player
+        
+        if player == 0:
+            fail_rate = 0
+        else:
+            fail_rate = num/player
+
+        answer.append((i, fail_rate))
         player -= num
 
-    fail = sorted(fail.items(), key=lambda values : values[1], reverse=True)
-
-    for i in fail:
-        answer.append(i[0])
-    
+    answer = sorted(answer, key=lambda values : values[1], reverse=True)
+    answer = [i[0] for i in answer]
     return answer
 
 N = int(input())
