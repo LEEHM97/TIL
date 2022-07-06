@@ -1,9 +1,11 @@
 <html>
     <head>
+        <!-- 중괄호 두개는 단순 출력 -->
         <title>{{ title }}</title>
     </head>
     <body>
         <ul>
+            <!-- 중괄호 안에 %는 python 문법이 들어간다는 뜻 -->
         {% for member in members: %}
         <li>{{ member }}</li>
 		<!-- {% print(member) %} -->
