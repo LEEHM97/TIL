@@ -13,20 +13,23 @@
 
 <div class="container">
   <h2>Predict Special Sale</h2>
-  <form action="(mini project)output.html">
+  <form action="sale">
     <div class="form-group">
-      <label for="day">Busy_day:</label>
-      <input type="day" class="form-control" id="busy_day" placeholder="Enter 0 or 1" name="day">
+      <label for="text">Busy_day:</label>
+      <input type="text" class="form-control" id="busy_day" placeholder="Enter 0 or 1" name="busy_day">
     </div>
     <div class="form-group">
-      <label for="temp">High_temperature:</label>
-      <input type="temp" class="form-control" id="temp" placeholder="Enter tempeature" name="temp">
+      <label for="high_temperature">High_temperature:</label>
+      <input type="text" class="form-control" id="high_temperature" placeholder="Enter tempeature" name="high_temperature">
     </div>
     <div class="form-group form-check">
 
     </div>
     <button type="submit" class="btn btn-primary">Predict</button>
   </form>
+
+  <!-- Output에 결과값 나타내준다.-->
+  <button type="button" class="btn btn-success"> {{ Output }} </button>
 </div>
 
 </body>
