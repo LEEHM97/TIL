@@ -1,9 +1,9 @@
 import sys
 
-import sys
 input = sys.stdin.readline
 
 n = int(input())
+
 
 def recur(i, n):
     print("____"*i + '"재귀함수가 뭔가요?"')
@@ -18,4 +18,5 @@ def recur(i, n):
 
 
 print("어느 한 컴퓨터공학과 학생이 유명한 교수님을 찾아가 물었다.")
+
 recur(0, n)
