@@ -14,7 +14,6 @@ while True:
             stack.append(words[i])
         elif words[i] == ')':
             if len(stack) == 0 or stack[-1] != '(':
-                print(len(stack))
                 print('no')
                 break
             else:
