@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 n, m = map(int, input().split())
 
 n_list = []
@@ -6,11 +9,11 @@ result = []
 cnt = 0
 
 for i in range(n):
-    person = input()
+    person = input().rstrip()
     n_list.append(person)
     
 for _ in range(m):
-    person = input()
+    person = input().rstrip()
     m_list.append(person)
     
 n_list = set(n_list)
