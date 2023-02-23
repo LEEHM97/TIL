@@ -2,13 +2,16 @@ import sys
 input = sys.stdin.readline
 
 n, m = map(int, input().split())
-
 ball = list(map(int, input().split()))
+array = [0] * 11
+
+for i in ball:
+    array[i] += 1
+    
 result = 0
 
-for i in range(len(ball)-1):
-    for j in range(i, len(ball)):
-        if ball[i] != ball[j]:
-            result += 1
-
+for i in range(1, m+1):
+    n -= array[i]
+    result += array[i] * n
+    
 print(result)
