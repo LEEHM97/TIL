@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 def solution(N, stages):
     answer = []
     player = len(stages)
